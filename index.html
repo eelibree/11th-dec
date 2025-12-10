@@ -258,11 +258,11 @@
 
         /* Freccia personalizzata per il dropdown */
         .game-select-wrapper::after {
-            content: "▼";
+            content: "";
             position: absolute;
             right: calc(50% - 160px);
             top: 50%;
-            transform: translateY(-30%);
+            transform: translateY(-50%);
             color: #8a2be2;
             font-size: 0.9em;
             pointer-events: none;
@@ -509,7 +509,7 @@
             <h3>🕹️ SCEGLI LA TUA MODALITÀ</h3>
             <div class="game-select-wrapper">
                 <select class="game-select" id="gameChoice" onchange="showConfirmation()">
-                    <option value="" disabled selected>🎮 Seleziona quì</option>
+                    <option value="" disabled selected>🎮  Seleziona quì  ▼</option>
                     <option value="videogiochi">🎮 Videogiochi</option>
                     <option value="tavolo">🎲 Giochi da tavolo</option>
                     <option value="aperto">🌳 Giochi all'aperto</option>
