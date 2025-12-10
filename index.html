@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Sorpresa dell'11° Dicembre 🎮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Snowflakes and gaming items animation */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+
+        .floating-item {
+            position: absolute;
+            top: -10px;
+            font-size: 1em;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 620px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(138, 43, 226, 0.3), 0 0 80px rgba(0, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            animation: fadeInScale 1s ease-out;
+            border: 4px solid #8a2be2;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .emoji-row {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            color: #6a0dad;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(138, 43, 226, 0.2);
+        }
+
+        .date {
+            color: #7b68ee;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .special-badge {
+            background: linear-gradient(135deg, #8a2be2 0%, #6a0dad 100%);
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4), 0 0 15px rgba(0, 255, 255, 0.3);
+            letter-spacing: 1px;
+            animation: neonPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes neonPulse {
+            0%, 100% {
+                box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4), 0 0 15px rgba(0, 255, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(138, 43, 226, 0.6), 0 0 25px rgba(0, 255, 255, 0.5);
+            }
+        }
+
+        .gaming-divider {
+            font-size: 2.5em;
+            color: #8a2be2;
+            margin: 25px 0;
+            animation: controllerShake 1s ease-in-out infinite;
+        }
+
+        @keyframes controllerShake {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        .voucher-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%);
+            border-radius: 25px;
+            padding: 40px 35px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 3px solid #00ffff;
+            position: relative;
+        }
+
+        .voucher-box::before {
+            content: "🕹️";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+        }
+
+        .voucher-box h2 {
+            color: #00ffff;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .voucher-box p {
+            color: #ffffff;
+            font-size: 1.4em;
+            line-height: 1.8;
+        }
+
+        .voucher-box .highlight {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff6ec7;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 110, 199, 0.5);
+        }
+
+        .voucher-box .subtitle {
+            color: #b8b8d1;
+            font-size: 1.1em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .choice-box {
+            background: linear-gradient(135deg, #f0e6ff 0%, #e6f0ff 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.15);
+            border: 2px dashed #8a2be2;
+        }
+
+        .choice-box h3 {
+            color: #6a0dad;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Nuovo stile per il select dropdown */
+        .game-select-wrapper {
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .game-select {
+            width: 100%;
+            max-width: 350px;
+            padding: 15px 45px 15px 20px;
+            font-size: 1.15em;
+            font-family: 'Georgia', serif;
+            color: #6a0dad;
+            background: linear-gradient(135deg, #ffffff 0%, #f0e6ff 100%);
+            border: 3px solid #8a2be2;
+            border-radius: 25px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            text-align-last: center;
+        }
+
+        .game-select:hover {
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .game-select:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.3), 0 6px 20px rgba(138, 43, 226, 0.35);
+        }
+
+        .game-select option {
+            padding: 12px;
+            background: #fff;
+            color: #6a0dad;
+        }
+
+        /* Freccia personalizzata per il dropdown */
+        .game-select-wrapper::after {
+            content: "▼";
+            position: absolute;
+            right: calc(50% - 160px);
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8a2be2;
+            font-size: 0.9em;
+            pointer-events: none;
+        }
+
+        /* Messaggio di conferma scelta */
+        .choice-confirmation {
+            margin-top: 20px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #8a2be2 0%, #6a0dad 100%);
+            color: white;
+            border-radius: 15px;
+            font-size: 1.1em;
+            display: none;
+            animation: popIn 0.4s ease-out;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .choice-confirmation.show {
+            display: block;
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .rules-box {
+            background: linear-gradient(135deg, #fff5f9 0%, #f5f0ff 100%);
+            border-radius: 20px;
+            padding: 25px 30px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 2px dashed #ff6ec7;
+            text-align: left;
+        }
+
+        .rules-box h3 {
+            color: #6a0dad;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .rules-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .rules-box li {
+            color: #2d2d44;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .rules-box li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+            font-size: 1.1em;
+        }
+
+        .rules-box li:nth-child(2):before {
+            content: "🍿";
+        }
+
+        .rules-box li:nth-child(3):before {
+            content: "📵";
+        }
+
+        .rules-box li:nth-child(4):before {
+            content: "🏆";
+        }
+
+        .rules-box li:nth-child(5):before {
+            content: "😈";
+        }
+
+        .pixel-hearts {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .pixel-heart {
+            font-size: 1.8em;
+            animation: heartPop 1s ease-in-out infinite;
+        }
+
+        .pixel-heart:nth-child(1) { animation-delay: 0s; }
+        .pixel-heart:nth-child(2) { animation-delay: 0.2s; }
+        .pixel-heart:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes heartPop {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .footer {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px dashed #b8b8d1;
+            color: #6a0dad;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        .footer strong {
+            color: #8a2be2;
+        }
+
+        /* Decorative elements */
+        .deco-top, .deco-bottom {
+            font-size: 2em;
+            color: #8a2be2;
+            margin: 10px 0;
+        }
+
+        /* Retro scanlines effect on container */
+        .container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(138, 43, 226, 0.03) 2px,
+                rgba(138, 43, 226, 0.03) 4px
+            );
+            pointer-events: none;
+            border-radius: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 25px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .voucher-box p {
+                font-size: 1.2em;
+            }
+
+            .special-badge {
+                font-size: 1.1em;
+                padding: 10px 25px;
+            }
+
+            .rules-box li {
+                font-size: 1em;
+            }
+
+            .game-select {
+                max-width: 280px;
+                font-size: 1em;
+                padding: 12px 40px 12px 15px;
+            }
+
+            .game-select-wrapper::after {
+                right: calc(50% - 125px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes and Gaming items -->
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = Math.random() * 3 + 5 + 's';
+            snowflake.style.opacity = Math.random() * 0.5 + 0.3;
+            snowflake.style.fontSize = Math.random() * 0.8 + 0.5 + 'em';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        function createGamingItem() {
+            const item = document.createElement('div');
+            item.classList.add('floating-item');
+            const items = ['🎮', '🕹️', '⭐', '✨', '🎲', '🏆'];
+            item.innerHTML = items[Math.floor(Math.random() * items.length)];
+            item.style.left = Math.random() * 100 + '%';
+            item.style.animationDuration = Math.random() * 4 + 6 + 's';
+            item.style.opacity = Math.random() * 0.5 + 0.3;
+            item.style.fontSize = Math.random() * 0.8 + 0.6 + 'em';
+            document.body.appendChild(item);
+
+            setTimeout(() => {
+                item.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 400);
+        setInterval(createGamingItem, 600);
+    </script>
+
+    <div class="container">
+        <div class="header">
+            <div class="emoji-row">🎁 🎄 🎅🏼</div>
+            <div class="deco-top">✨ 🎮 ✨</div>
+            <h1>Sorpresa dell'11° Dicembre</h1>
+            <div class="date">Casella N°11 del Calendario dell'Avvento</div>
+        </div>
+
+        <div class="special-badge">🎮 SERATA GAMING 🎮</div>
+
+        <div class="gaming-divider">🕹️</div>
+
+        <div class="voucher-box">
+            <h2>🎟️ Buono Speciale 🎟️</h2>
+            <p>Preparati alla sfida!</p>
+            <p class="highlight">SERATA GAMING SENZA INTERRUZIONI</p>
+            <p class="subtitle">Tu scegli, io gioco (e perdo con stile 😎)</p>
+        </div>
+
+        <div class="choice-box">
+            <h3>🎯 SCEGLI LA TUA MODALITÀ</h3>
+            <div class="game-select-wrapper">
+                <select class="game-select" id="gameChoice" onchange="showConfirmation()">
+                    <option value="" disabled selected>🎮 Seleziona il tipo di gioco...</option>
+                    <option value="videogiochi">🎮 Videogiochi</option>
+                    <option value="tavolo">🎲 Giochi da tavolo</option>
+                    <option value="aperto">🌳 Giochi all'aperto</option>
+                    <option value="carte">🃏 Giochi di carte</option>
+                    <option value="sorpresa">🎯 Sfida a sorpresa</option>
+                </select>
+            </div>
+            <div class="choice-confirmation" id="confirmation">
+                <span id="confirmationText"></span>
+            </div>
+        </div>
+
+        <script>
+            function showConfirmation() {
+                const select = document.getElementById('gameChoice');
+                const confirmation = document.getElementById('confirmation');
+                const confirmationText = document.getElementById('confirmationText');
+                
+                if (select.value) {
+                    const messages = {
+                        'videogiochi': '🎮 Perfetto! Preparati a una sfida epica ai videogiochi!',
+                        'tavolo': '🎲 Ottima scelta! I giochi da tavolo sono pronti!',
+                        'aperto': '🌳 Avventura all\'aperto in arrivo! Che vinca il migliore!',
+                        'carte': '🃏 Le carte sono servite! Prepara la tua strategia!',
+                        'sorpresa': '🎯 Coraggioso! La sfida a sorpresa ti aspetta...'
+                    };
+                    
+                    confirmationText.innerHTML = messages[select.value];
+                    confirmation.classList.add('show');
+                } else {
+                    confirmation.classList.remove('show');
+                }
+            }
+        </script>
+
+        <div class="pixel-hearts">
+            <span class="pixel-heart">💜</span>
+            <span class="pixel-heart">💜</span>
+            <span class="pixel-heart">💜</span>
+        </div>
+
+        <div class="rules-box">
+            <h3>📋 REGOLAMENTO SERATA</h3>
+            <ul>
+                <li>Tu scegli i giochi (potere assoluto!)</li>
+                <li>Snack e bevande inclusi nel pacchetto</li>
+                <li>Zero interruzioni, telefoni in modalità aereo ✈️</li>
+                <li>La vincitrice... ok, il vincitore avrà gloria eterna</li>
+                <li>Trash talking consentito (anzi, incoraggiato 😏)</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>Validità:</strong> Quando vuoi tu! ♾️</p>
+            <p><strong>Dove:</strong> Location a tua scelta 🏠</p>
+            <p><strong>Dress code:</strong> Outfit comodo da campione 🥇</p>
+        </div>
+
+        <div class="deco-bottom">🎄 🎮 🎄</div>
+    </div>
+</body>
+</html>
