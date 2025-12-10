@@ -156,7 +156,7 @@
         }
 
         .voucher-box::before {
-            content: "🕹️";
+            content: "🥇";
             position: absolute;
             top: -25px;
             left: 50%;
@@ -469,7 +469,7 @@
         function createGamingItem() {
             const item = document.createElement('div');
             item.classList.add('floating-item');
-            const items = ['🎮', '🕹️', '⭐', '✨', '🎲', '🏆'];
+            const items = ['🎮', '🕹️', '⭐', '✨', '🎲', '🏆', '🥇'];
             item.innerHTML = items[Math.floor(Math.random() * items.length)];
             item.style.left = Math.random() * 100 + '%';
             item.style.animationDuration = Math.random() * 4 + 6 + 's';
@@ -502,14 +502,14 @@
             <h2>🎟️ Buono Speciale 🎟️</h2>
             <p>Preparati alla sfida!</p>
             <p class="highlight">SERATA GAMING SENZA INTERRUZIONI</p>
-            <p class="subtitle">Tu scegli, io gioco (e perdo con stile 😎)</p>
+            <p class="subtitle">Tu scegli, io gioco<br>(con stile 🥇)</p>
         </div>
 
         <div class="choice-box">
             <h3>🎯 SCEGLI LA TUA MODALITÀ</h3>
             <div class="game-select-wrapper">
                 <select class="game-select" id="gameChoice" onchange="showConfirmation()">
-                    <option value="" disabled selected>🎮 Seleziona il tipo di gioco...</option>
+                    <option value="" disabled selected>🎮 Seleziona il tipo<br>di gioco...</option>
                     <option value="videogiochi">🎮 Videogiochi</option>
                     <option value="tavolo">🎲 Giochi da tavolo</option>
                     <option value="aperto">🌳 Giochi all'aperto</option>
