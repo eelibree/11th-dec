@@ -156,7 +156,7 @@
         }
 
         .voucher-box::before {
-            content: "";
+            content: "🕹️";
             position: absolute;
             top: -25px;
             left: 50%;
@@ -469,7 +469,7 @@
         function createGamingItem() {
             const item = document.createElement('div');
             item.classList.add('floating-item');
-            const items = ['🎮', '🕹️', '⭐', '✨', '🎲', '🏆', '🥇'];
+            const items = ['🎮', '🕹️', '⭐', '✨', '🎲', '🏆'];
             item.innerHTML = items[Math.floor(Math.random() * items.length)];
             item.style.left = Math.random() * 100 + '%';
             item.style.animationDuration = Math.random() * 4 + 6 + 's';
@@ -499,10 +499,10 @@
         <div class="gaming-divider">🕹️</div>
 
         <div class="voucher-box">
-            <h2>🎟️ Buono Gioco 🎟️</h2>
+            <h2>🎟️ Buono Speciale 🎟️</h2>
             <p>Preparati alla sfida!</p>
             <p class="highlight">SERATA GAMING SENZA INTERRUZIONI</p>
-            <p class="subtitle">Tu scegli, io gioco<br>(con stile 🥇)</p>
+            <p class="subtitle">Tu scegli, io gioco (e perdo con stile 😎)</p>
         </div>
 
         <div class="choice-box">
@@ -513,9 +513,9 @@
                     <option value="videogiochi">🎮 Videogiochi</option>
                     <option value="tavolo">🎲 Giochi da tavolo</option>
                     <option value="aperto">🌳 Giochi all'aperto</option>
-                    <option value="carte">♠️ Giochi di carte</option>
+                    <option value="carte">🃏 Giochi di carte</option>
                     <option value="sorpresa">🎯 Sfida a sorpresa</option>
-                    <option value="jolly">🃏 Scelgi tu il gioco</option>
+                    <option value="sceglitu">🃏 Scegli tu il gioco</option>
                 </select>
             </div>
             <div class="choice-confirmation" id="confirmation">
@@ -533,10 +533,10 @@
                     const messages = {
                         'videogiochi': '🎮 Perfetto! Preparati a una sfida epica ai videogiochi!',
                         'tavolo': '🎲 Ottima scelta! I giochi da tavolo sono pronti!',
-                        'aperto': '🌳 Sfida all\'aperto in arrivo! Che vinca il migliore!',
-                        'carte': '♠️ Le carte sono servite! Prepara la tua strategia!',
-                        'sorpresa': '🎯 Coraggioso! La sfida a sorpresa ti aspetta...'
-                        'jolly': '🃏 Come sempre... comandi tu! Scrivimi la scelta.'
+                        'aperto': '🌳 Avventura all\'aperto in arrivo! Che vinca il migliore!',
+                        'carte': '🃏 Le carte sono servite! Prepara la tua strategia!',
+                        'sorpresa': '🎯 Coraggioso! La sfida a sorpresa ti aspetta...',
+                        'sceglitu': '🃏 Come sempre... comandi tu! Scrivimi la scelta.'
                     };
                     
                     confirmationText.innerHTML = messages[select.value];
